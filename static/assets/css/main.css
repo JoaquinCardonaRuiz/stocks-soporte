@@ -1,5 +1,18 @@
 @import url(font-awesome.min.css);
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('../fonts/roboto/Roboto-Regular.ttf'); 
+}
 
+@font-face {
+  font-family: Roboto-Medium;
+  src: url('../fonts/roboto/Roboto-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('../fonts/roboto/Roboto-Regular.ttf'); 
+}
 /*
 	Prism by TEMPLATED
 	templated.co @templatedco
@@ -2671,14 +2684,14 @@
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 2em 0 3em 0;
 		position: relative;
 	}
 
 		.wrapper > .inner {
-			margin-left: auto;
+			margin-left: 5em;
 			margin-right: auto;
-			width: 70em;
+			width: 100em;
 			max-width: 100%;
 		}
 
@@ -3206,7 +3219,7 @@
 	}
 
 		#banner h2 {
-			font-size: 2.5em;
+			font-size: 2em;
 			line-height: 1.4;
 			margin-bottom: 0;
 			color: #fff;
@@ -3216,6 +3229,7 @@
 			font-size: 1.15em;
 			font-weight: bold;
 			line-height: 1.5em;
+			margin-top: 1em;
 			margin-bottom: 1.5em;
 		}
 
@@ -3344,3 +3358,208 @@
 			}
 
 		}
+
+		.js-pscroll {
+			position: relative;
+			overflow: hidden;
+		  }
+		  
+		  
+		  .table100 .ps__rail-x {
+			z-index: 1010;
+			height: 6px;
+			background-color: transparent;
+			opacity: 1 !important;
+			bottom: 10px;
+		  }
+		  
+		  .table100 .ps__rail-x::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: #e6e6e6;
+			height: 100%;
+			width: calc(100% - 30px);
+			left: 15px;
+			top: 0px;
+		  }
+		  
+		  .table100 .ps__rail-x .ps__thumb-x {
+			height: 100%;
+			bottom: 0;
+			background-color: transparent;
+			opacity: 1 !important;
+		  }
+		  
+		  .table100 .ps__rail-x .ps__thumb-x::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: #b3b3b3;
+			height: 100%;
+			width: calc(100% - 30px);
+			top: 0;
+			left: 15px;
+		  }
+		  
+		  
+		  /*//////////////////////////////////////////////////////////////////
+		  [ Table ]*/
+		  
+		  .limiter {
+			width: 100%;
+			margin: 0 auto;		  
+		  
+		  }
+		  
+		  .container-table100 {
+			max-width: 700px;
+			margin: 0 auto;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+
+		  }
+		  
+		  .wrap-table100 {
+			width: 100%;
+		  }
+		  
+		  /*//////////////////////////////////////////////////////////////////
+		  [ Table ]*/
+		  .table100 {
+			background-color: #fff;
+		  }
+		  
+		  table {
+			width: 100%;
+		  }
+		  
+		  th, td {
+			font-weight: unset;
+			padding-right: 10px;
+		  }
+		  
+		  .column1 {
+			width: 100%;
+			padding-left: 40px;
+		  }
+		  
+		  .column2 {
+			width: 130px;
+			padding-left: 55px;
+		  }
+		  
+		  .column3 {
+			width: 100px;
+		  }
+		  
+		  .column4 {
+			width: 80px;
+		  }
+		  
+		  .column5 {
+			width: 235px;
+		  }
+		  
+		  .column6 {
+			width: 170px;
+		  }
+		  
+		  .column7 {
+			width: 330px;
+		  }
+		  
+		  .column8 {
+			width: 305px;
+		  }
+		  
+		  .table100 th {
+			padding-top: 21px;
+			padding-bottom: 21px;
+		  }
+		  
+		  .table100 td {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		  }
+		  
+		  
+		  /*==================================================================
+		  [ Fix col ]*/
+		  .table100 {
+			width: 100%;
+			position: relative;
+		  }
+		  
+		  .table100-firstcol {
+			background-color: #fff;
+			position: absolute;
+			z-index: 1000;
+			width: 180px;
+			top: 0;
+			left: 0;
+		  }
+		  
+		  .table100-firstcol table {
+			background-color: #fff;
+		  }
+		  
+		  .wrap-table100-nextcols {
+			width: 100%;
+			overflow: auto;
+			padding-left: 150px;
+		  }
+		  
+		  .table100-nextcols table{
+			table-layout: fixed;
+		  }
+		  
+		  .shadow-table100-firstcol {
+			box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+			-moz-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+			-webkit-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+			-o-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+			-ms-box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.05);
+		  }
+		  
+		  .table100-firstcol table {
+			background-color: transparent;
+		  }
+		  
+		  /*==================================================================
+		  [ Ver1 ]*/
+		  
+		  .table100.ver1 th {
+			font-family: Roboto-Bold;
+			font-size: 14px;
+			color: #333333;
+			line-height: 1.4;
+			text-transform: uppercase;
+		  }
+		  
+		  .table100.ver1 td {
+			font-family: Roboto-Medium;
+			font-size: 15px;
+			line-height: 1.4;
+		  }
+		  
+		  .table100.ver1 .table100-firstcol td {
+			color: #666666;
+		  }
+		  
+		  .table100.ver1 .table100-nextcols td {
+			color: #999999;
+		  }
+		  
+		  
+		  .table100.ver1 tr {
+			border-bottom: 1px solid #f2f2f2;
+		  }
+		  
+		  

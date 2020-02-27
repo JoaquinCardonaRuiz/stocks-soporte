@@ -10,8 +10,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="{{ url_for('static',filename='assets/css/main.css')}}" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/animate/animate.css')}}">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/select2/select2.min.css')}}">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+        <!--===============================================================================================-->
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/css/util.css')}}">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/css/main.css')}}">
+        <!--===============================================================================================-->
 	</head>
 	<body>
 
@@ -19,12 +32,12 @@
 			<section id="banner">
 				<div class="inner split">
 					<section>
-						<h2>Welcome to NYSE.py, a stock trading app by <a href="https://github.com/JoaquinCardonaRuiz">Joaquín Cardona</a></h2>
+						<h2>Bienvenido a NYSE.py una aplicación de seguimiento de acciones desarrollada por <a href="https://github.com/JoaquinCardonaRuiz">Joaquín Cardona</a></h2>
 					</section>
 					<section>
-						<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Phasellus aliquam et tempus lorem dolor feugiat adipiscing lorem.</p>
+						<p>Este proyecto fue desarrollado como trabajo práctico de Soporte a la Gestión de Datos con Programación Visual, utilizando <a href="https://www.python.org/">Python</a>, <a href="https://palletsprojects.com/p/flask/">Flask</a>, y <a href="https://www.mongodb.com/">MongoDB</a>.</p>
 						<ul class="actions">
-							<li><a href="#" class="button special">Get started</a></li>
+							<li><a href="https://github.com/JoaquinCardonaRuiz/stocks-soporte" class="button special">Visitar Repositorio</a></li>
 						</ul>
 					</section>
 				</div>
@@ -34,24 +47,209 @@
 			<section id="one" class="wrapper">
 				<div class="inner split">
 					<section>
-						<h2>Magna feugiat adipiscing</h2>
-						<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus aliquam et tempus lorem feugiat adipiscing lorem. Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis orci. Pellentesque eget consequat.</p>
-						<ul class="actions">
-							<li><a href="#" class="button alt">Learn more</a></li>
-						</ul>
+                        <div class="limiter">
+                            <div class="container-table100">
+                                <div class="wrap-table100">
+                                    <div class="table100 ver1">
+                                        <div class="table100-firstcol">
+                                            <table>
+                                                <thead>
+                                                    <tr class="row100 head">
+                                                        <th class="cell100 column1">Tus Tickers</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">AAPL (Apple)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">DIS (Disney)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">FB (Facebook)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">TSLA (Tesla)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">NFLX (Netflix)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">AMZN (Amazon)</td>
+                                                    </tr>
+                    
+                                                    <tr class="row100 body">
+                                                        <td class="cell100 column1">GOOG (Google)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <div class="wrap-table100-nextcols js-pscroll">
+                                            <div class="table100-nextcols">
+                                                <table>
+                                                    <thead>
+                                                        <tr class="row100 head">
+                                                            <th class="cell100 column2">Precio</th>
+                                                            <th class="cell100 column3">Cambio</th>
+                                                            <th class="cell100 column4">Recs</th>
+                                                            <th class="cell100 column5">Dividendos</th>
+                                                            <th class="cell100 column6">Splits</th>
+                                                            <th class="cell100 column7">Ganancias</th>
+                                                            <th class="cell100 column8">Movimiento</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">421.21</td>
+                                                            <td class="cell100 column3">-24.46</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">brandon94@example.com</td>
+                                                            <td class="cell100 column6">30</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx6262</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">316.56</td>
+                                                            <td class="cell100 column3">-10.21</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">kathy_82@example.com</td>
+                                                            <td class="cell100 column6">26</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx1616</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">389.28</td>
+                                                            <td class="cell100 column4">+11.34</td>
+                                                            <td class="cell100 column5">Buy</td>
+                                                            <td class="cell100 column5">kathy_82@example.com</td>
+                                                            <td class="cell100 column6">32</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx5326</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">231.52</td>
+                                                            <td class="cell100 column3">-1.46</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">michael94@example.com</td>
+                                                            <td class="cell100 column6">22</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx6328</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">112.31</td>
+                                                            <td class="cell100 column3">-8.21</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">jasoncox@example.com</td>
+                                                            <td class="cell100 column6">25</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx7648</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">236.60</td>
+                                                            <td class="cell100 column3">+3.11</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">christian_83@example.com</td>
+                                                            <td class="cell100 column6">28</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx4152</td>
+                                                        </tr>
+                    
+                                                        <tr class="row100 body">
+                                                            <td class="cell100 column2">125.25</td>
+                                                            <td class="cell100 column3">+12.46</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">emily90@example.com</td>
+                                                            <td class="cell100 column6">24</td>
+                                                            <td class="cell100 column7">New York City, NY</td>
+                                                            <td class="cell100 column8">424242xxxxxx6668</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    <!--===============================================================================================-->	
+                        <script src="{{ url_for('static',filename='assets/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+                    <!--===============================================================================================-->
+                        <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/popper.js')}}"></script>
+                        <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+                    <!--===============================================================================================-->
+                        <script src="{{ url_for('static',filename='assets/vendor/select2/select2.min.js')}}"></script>
+                    <!--===============================================================================================-->
+                        <script src="{{ url_for('static',filename='assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+                        <script>
+                            $('.js-pscroll').each(function(){
+                                var ps = new PerfectScrollbar(this);
+                    
+                                $(window).on('resize', function(){
+                                    ps.update();
+                                })
+                    
+                                $(this).on('ps-x-reach-start', function(){
+                                    $(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+                                });
+                    
+                                $(this).on('ps-scroll-x', function(){
+                                    $(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+                                });
+                    
+                            });
+                    
+                            
+                            
+                            
+                        </script>
+                    <!--===============================================================================================-->
+                        <script src="js/main.js"></script>
+                            
 					</section>
-					<section>
-						<ul class="checklist">
-							<li>Ipsum nisl sed cursus magna</li>
-							<li>Amet veroeros sed aliquam consequat</li>
-							<li>Tempus lorem adipiscing et lorem</li>
-							<li>Morbi pharetra vitae felis placerat</li>
-							<li>Pharetra nulla risus orci dapibus</li>
-						</ul>
+					<section style="padding-top: 1em;">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                            <div id="tradingview_31a6f"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                            new TradingView.widget(
+                            {
+                            "width": 800,
+                            "height": 480,
+                            "symbol": "NASDAQ:AAPL",
+                            "interval": "D",
+                            "timezone": "Etc/UTC",
+                            "theme": "Light",
+                            "style": "3",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "allow_symbol_change": false,
+                            "container_id": "tradingview_31a6f"
+                        }
+                            );
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
 					</section>
 				</div>
 			</section>
-
+        
+    
 		<!-- Two -->
 			<section id="two" class="wrapper style2 alt">
 				<div class="inner">
@@ -145,6 +343,9 @@
 			<script src="{{ url_for('static',filename='assets/js/util.js')}}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+    
 
+
+    
 	</body>
 </html>
