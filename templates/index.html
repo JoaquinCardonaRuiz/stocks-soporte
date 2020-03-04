@@ -11,10 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <link rel="icon" type="image/ico" href="{{ url_for('static',filename='images/favicon.ico')}}">
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}">
         <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assets/vendor/animate/animate.css')}}">
         <!--===============================================================================================-->
@@ -59,36 +60,42 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">AAPL</td>
+                                                        <td class="cell100 column1">
+                                                    </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">DIS</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">FB</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">TSLA</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">NFLX</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">AMZN</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                     
                                                     <tr class="row100 body">
-                                                        <td class="cell100 column1">GOOG</td>
+                                                        <td class="cell100 column1">
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                        
                                         <div class="wrap-table100-nextcols js-pscroll">
                                             <div class="table100-nextcols">
                                                 <table>
@@ -98,9 +105,7 @@
                                                             <th class="cell100 column3">Cambio</th>
                                                             <th class="cell100 column4">Recs</th>
                                                             <th class="cell100 column5">Dividendos</th>
-                                                            <th class="cell100 column6">Splits</th>
-                                                            <th class="cell100 column7">Ganancias</th>
-                                                            <th class="cell100 column8">Movimiento</th>
+                                                            <th class="cell100 column6">Próximo vencimiento opciones</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -108,70 +113,56 @@
                                                             <td class="cell100 column2">421.21</td>
                                                             <td class="cell100 column3">-24.46</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">brandon94@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">30</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx6262</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">316.56</td>
                                                             <td class="cell100 column3">-10.21</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">kathy_82@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">26</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx1616</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">389.28</td>
-                                                            <td class="cell100 column4">+11.34</td>
-                                                            <td class="cell100 column5">Buy</td>
-                                                            <td class="cell100 column5">kathy_82@example.com</td>
+                                                            <td class="cell100 column3">+11.34</td>
+                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">32</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx5326</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">231.52</td>
                                                             <td class="cell100 column3">-1.46</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">michael94@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">22</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx6328</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">112.31</td>
                                                             <td class="cell100 column3">-8.21</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">jasoncox@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">25</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx7648</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">236.60</td>
                                                             <td class="cell100 column3">+3.11</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">christian_83@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">28</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx4152</td>
                                                         </tr>
                     
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">125.25</td>
                                                             <td class="cell100 column3">+12.46</td>
                                                             <td class="cell100 column4">Buy</td>
-                                                            <td class="cell100 column5">emily90@example.com</td>
+                                                            <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">24</td>
-                                                            <td class="cell100 column7">New York City, NY</td>
-                                                            <td class="cell100 column8">424242xxxxxx6668</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -182,7 +173,9 @@
                             </div>
                         </div>
                     
-                    
+                    <form action="{{ url_for('handle_data') }}" method="post" id="stocks_form">
+                        <input class="postform" type="hidden" name="stocks" value="default" />
+                    </form>
                     <!--===============================================================================================-->	
                         <script src="{{ url_for('static',filename='assets/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
                     <!--===============================================================================================-->
@@ -192,21 +185,66 @@
                         <script src="{{ url_for('static',filename='assets/vendor/select2/select2.min.js')}}"></script>
                     <!--===============================================================================================-->
                         <script src="{{ url_for('static',filename='assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+
+                    
+                    <script>
+                        global_i = 1;
+                            function edit_ticker(i){
+                                console.log(i)
+                                global_i = i;
+                                cell = document.getElementsByClassName("cell100 column1")[i];
+                                //document.getElementsByClassName("editimage")[i-1].style.display = "none";
+                                var tmpObj=document.createElement("td");
+                                tmpObj.className = "cell100 column1";
+                                tmpObj.innerHTML='<input class=tickerinput type="text" onkeydown="change_text()" onsubmit="return false;">';
+                                cell.parentElement.replaceChild(tmpObj,cell);
+                                document.getElementsByClassName("tickerinput")[0].focus();
+                            }
+                            function change_text(){
+                                if(event.keyCode == 13){
+                                    cell = document.getElementsByClassName("cell100 column1")[global_i];
+                                    var user_stocks = {{ user_stocks | tojson }};
+                                    var tmpObj=document.createElement('td');
+                                    tmpObj.className = "cell100 column1";
+                                    tmpObj.innerHTML= document.getElementsByClassName("tickerinput")[0].value +' <img align=right class=editimage src="{{ url_for("static",filename="images/edit.png")}}"onclick="edit_ticker('+global_i.toString()+')">'
+                                    create_widget(document.getElementsByClassName("tickerinput")[0].value);
+                                    user_stocks[global_i-1] = document.getElementsByClassName("tickerinput")[0].value
+                                    cell.parentElement.replaceChild(tmpObj,cell);
+                                    var tmpObj = document.createElement("input")
+                                    tmpObj.innerHTML = '<input class="postform" type="hidden" name="stocks" value='+user_stocks.toString()+'>';
+                                    obj = document.getElementsByClassName("postform")[0];
+                                    console.log(obj)
+                                    obj.parentElement.replaceChild(tmpObj,obj);
+                                    document.getElementById("stocks_form").submit();
+                                }
+                            }
+
+                         
+                        </script>
+
                         <script>
                             var sel_row = 1;
                             function style_row(){
                                 var first_col = document.getElementsByClassName("table100 ver1")[0].children[0].children[0];
                                 var data =      document.getElementsByClassName("table100 ver1")[0].children[1].children[0].children[0];
-                                console.log(sel_row);
+                                console.log("selected row: "+sel_row.toString());
                                 for (var i = 1, row; row = first_col.rows[i]; i++) {
-                                    row.onclick = function(){sel_row = this.sectionRowIndex+1;create_widget(this.children[0].childNodes[0].data);style_row()}
+                                    row.onclick = function(){
+                                        sel_row = this.sectionRowIndex+1;
+                                        if(this.children[0].childNodes[0].data != current_sym && this.children[0].childNodes[0].data != " "){
+                                            create_widget(this.children[0].childNodes[0].data);
+                                            style_row()
+                                        }
+                                    }
                                     if(i==sel_row){
+                                        //document.getElementsByClassName("editimage")[i-1].style.display = "inline-block"
                                         row.style.background = "#9b71a8";
                                         row.style.color = "#FFFFFF";
                                         data.rows[i].style.background = "#f4e1fa";
                                         data.rows[i].style.color = "#FFFFFF";
                                     }
                                     else{
+                                        //document.getElementsByClassName("editimage")[i-1].style.display = "none"
                                         row.style.background = "#FFFFFF";
                                         row.style.color = "#666666";
                                         data.rows[i].style.background = "#FFFFFF";
@@ -243,11 +281,12 @@
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container">
                             <div id="tradingview_31a6f"></div>
-                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></div>
+                            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AMEX-SPY//" rel="noopener" target="_blank"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                             <script type="text/javascript">
 
                             function create_widget(sym){
+                                current_sym = sym;
                                 new TradingView.widget({
                                     "width": 800,
                                     "height": 480,
@@ -262,8 +301,8 @@
                                     "allow_symbol_change": false,
                                     "container_id": "tradingview_31a6f"});
                             };
-                            
-                            create_widget("AAPL");
+                            current_sym = "SPY";
+                            create_widget("SPY");
                             </script>
                         </div>
                         <!-- TradingView Widget END -->
@@ -274,96 +313,36 @@
     
 		<!-- Two -->
 			<section id="two" class="wrapper style2 alt">
-				<div class="inner">
-					<div class="spotlight">
-						<div class="image">
-							<img src="{{ url_for('static',filename='images/pic01.jpg')}}" alt="" />
-						</div>
-						<div class="content">
-							<h3>Ipsum pharetra tempus</h3>
-							<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus malesuada quis orci. Pellentesque eget consequat.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Details</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="spotlight">
-						<div class="image">
-							<img src="{{ url_for('static',filename='images/pic02.jpg')}}" alt="" />
-						</div>
-						<div class="content">
-							<h3>Magna consequat felis</h3>
-							<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus malesuada quis orci. Pellentesque eget consequat.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Details</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="spotlight">
-						<div class="image">
-							<img src="{{ url_for('static',filename='images/pic03.jpg')}}" alt="" />
-						</div>
-						<div class="content">
-							<h3>Vitae placerat adipiscing</h3>
-							<p>Lorem ipsum nisl sed cursus magna et amet veroeros. Sed phasellus malesuada quis orci. Pellentesque eget consequat.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Details</a></li>
-							</ul>
-						</div>
-					</div>
-					<ul class="actions special">
-						<li><a href="#" class="button alt">Ipsum magna tempus</a></li>
-					</ul>
+				<div class="inner"> 
+                    <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="125313/"></script>
 				</div>
 			</section>
-
-		<!-- Contact -->
-			<section id="contact" class="wrapper">
-				<div class="inner split">
-					<section>
-						<h2>Orci malesuada</h2>
-						<p>Morbi pharetra vitae felis placerat pharetra. Nulla risus orci, dapibus id malesuada et nec, malesuada quis pellentesque eget.</p>
-						<form action="#" class="alt" method="POST">
-							<div class="row uniform">
-								<div class="6u 12u$(xsmall)">
-									<input name="name" placeholder="Name" type="text">
-								</div>
-								<div class="6u$ 12u$(xsmall)">
-									<input name="email" placeholder="Email" type="email">
-								</div>
-								<div class="12u$">
-									<textarea name="message" placeholder="Message" rows="4"></textarea>
- 								</div>
- 							</div>
- 							<ul class="actions">
- 								<li><input class="alt" value="Send message" type="submit"></li>
- 							</ul>
- 						</form>
-					</section>
-					<section>
-						<ul class="contact">
-							<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-							<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
-							<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
-							<li class="fa-home">1234 Somewhere Road Suite 9823<br/>Nashville, TN 00000-0000</li>
-						</ul>
-					</section>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="copyright">
-					&copy; Untitled. All rights reserved. Images: <a href="http://unsplash.com">Unsplash</a>. Design: <a href="http://templated.co">TEMPLATED</a>.
-				</div>
-			</footer>
-
+            
 		<!-- Scripts -->
 			<script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"></script>
 			<script src="{{ url_for('static',filename='assets/js/skel.min.js')}}"></script>
 			<script src="{{ url_for('static',filename='assets/js/util.js')}}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+            <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+            
+            <script>
+                stocks = document.getElementsByClassName("cell100 column1");
+                var user_stocks = {{ user_stocks | tojson }};
+                for (j = 1; j < stocks.length; j++) {
+                    stocks[j].innerHTML = user_stocks[j-1]+' <img align=right class=editimage src="{{ url_for("static",filename="images/edit.png")}}"onclick="edit_ticker('+j.toString()+')">';
+                } 
+                fill_table()
+                function fill_table(){
+                    var rows = document.getElementsByClassName("row100 body");
+                    var stock_info = {{stock_info | tojson}};
+                    for (j = 7; j < rows.length; j++) {
+                        var columns = rows[j].children;
+                        for (k = 0; k < columns.length; k++){
+                            console.log(stock_info)
+                            rows[j].children[k].innerHTML = stock_info[j-7][k];
+                        }    
+                    }    
+                }
+            </script>
 	</body>
 </html>

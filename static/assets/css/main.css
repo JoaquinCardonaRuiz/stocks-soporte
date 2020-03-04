@@ -3460,32 +3460,25 @@
 		  
 		  .column2 {
 			width: 130px;
-			padding-left: 55px;
+			padding-left: 55px;text-align-last: right;
 		  }
 		  
 		  .column3 {
-			width: 100px;
+			width: 100px;text-align-last: right;
 		  }
 		  
 		  .column4 {
-			width: 80px;
+			width: 100px;text-align-last: center;
 		  }
 		  
 		  .column5 {
-			width: 235px;
+			width: 130px;text-align-last: center;
 		  }
 		  
 		  .column6 {
-			width: 170px;
+			width: 260px;text-align-last: left;
 		  }
 		  
-		  .column7 {
-			width: 330px;
-		  }
-		  
-		  .column8 {
-			width: 305px;
-		  }
 		  
 		  .table100 th {
 			padding-top: 21px;
@@ -3573,4 +3566,11 @@
 			
 		  }
 		  
-		 
+		  .editimage{
+			width: 20px;
+			height: 20px;
+		  }
+
+		  input.tickerinput{
+			  height: 24px;
+		  }
