@@ -15,7 +15,7 @@ current_stock_info = [[]]
 def index():
     if user_logged:
         print(user_logged)
-        return render_template('index.html', user_stocks= user_logged["stocks"], stock_info = current_stock_info)
+        return render_template('index.html', user_stocks= user_logged["stocks"], stock_info = current_stock_info, news = negocio.get_news())
     else: return login()
 
 
@@ -54,7 +54,6 @@ def login():
 def handle_data():
     global user_logged
     stocks = request.form['stocks']
-    print("post returned: ", stocks)
     update_one_stock_data(stocks,user_logged["stocks"])
     user_logged = negocio.update_user(stocks,user_logged)
     return redirect('/')
@@ -71,4 +70,4 @@ def update_one_stock_data(new_stocks,old_stocks):
 if __name__ == "__main__":
     app.secret_key = 'secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
-    app.run(debug=False)
+    app.run(debug=True)

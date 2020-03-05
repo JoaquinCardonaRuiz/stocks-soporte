@@ -105,14 +105,14 @@
                                                             <th class="cell100 column3">Cambio</th>
                                                             <th class="cell100 column4">Recs</th>
                                                             <th class="cell100 column5">Dividendos</th>
-                                                            <th class="cell100 column6">Próximo vencimiento opciones</th>
+                                                            <th class="cell100 column6">Prox venc opciones</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">421.21</td>
                                                             <td class="cell100 column3">-24.46</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(1)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">30</td>
                                                         </tr>
@@ -120,7 +120,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">316.56</td>
                                                             <td class="cell100 column3">-10.21</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(2)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">26</td>
                                                         </tr>
@@ -128,7 +128,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">389.28</td>
                                                             <td class="cell100 column3">+11.34</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(3)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">32</td>
                                                         </tr>
@@ -136,7 +136,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">231.52</td>
                                                             <td class="cell100 column3">-1.46</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(4)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">22</td>
                                                         </tr>
@@ -144,7 +144,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">112.31</td>
                                                             <td class="cell100 column3">-8.21</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(5)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">25</td>
                                                         </tr>
@@ -152,7 +152,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">236.60</td>
                                                             <td class="cell100 column3">+3.11</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(6)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">28</td>
                                                         </tr>
@@ -160,7 +160,7 @@
                                                         <tr class="row100 body">
                                                             <td class="cell100 column2">125.25</td>
                                                             <td class="cell100 column3">+12.46</td>
-                                                            <td class="cell100 column4">Buy</td>
+                                                            <td class="cell100 column4" onClick = createRecsWidget(7)>Buy</td>
                                                             <td class="cell100 column5">0.77</td>
                                                             <td class="cell100 column6">24</td>
                                                         </tr>
@@ -175,6 +175,7 @@
                     
                     <form action="{{ url_for('handle_data') }}" method="post" id="stocks_form">
                         <input class="postform" type="hidden" name="stocks" value="default" />
+                        <script>document.getElementsByClassName("postform")[0].style.display = "none"</script>
                     </form>
                     <!--===============================================================================================-->	
                         <script src="{{ url_for('static',filename='assets/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
@@ -212,6 +213,7 @@
                                     cell.parentElement.replaceChild(tmpObj,cell);
                                     var tmpObj = document.createElement("input")
                                     tmpObj.innerHTML = '<input class="postform" type="hidden" name="stocks" value='+user_stocks.toString()+'>';
+                                    tmpObj.style.display = "none";
                                     obj = document.getElementsByClassName("postform")[0];
                                     console.log(obj)
                                     obj.parentElement.replaceChild(tmpObj,obj);
@@ -275,7 +277,97 @@
                         </script>
                     <!--===============================================================================================-->
                         <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
-                            
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Launch demo modal
+                        <script>document.getElementsByClassName("btn btn-primary")[0].style.display = "none";</script>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Posición Recomendada: Sell</h5>
+                            <script>
+                                document.getElementsByClassName("modal-header")[0].style.background = "#bb2222";
+                            </script>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="list-group">
+
+                                  </ul>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                    <script>
+                        function createRecsWidget(i){
+                            document.getElementsByClassName("list-group")[0].innerHTML = "";
+                            eventFire(document.getElementsByClassName("btn btn-primary")[0], 'click');
+                            console.log(i)
+                            var s1 = document.getElementsByClassName('cell100 column4')[i].innerHTML;
+                            var s2 = "";
+                            if(s1.includes("Buy")){
+                                s2 = "Buy"
+                                document.getElementsByClassName("modal-header")[0].style.background = "#11aa11";
+                            }
+                            else if(s1.includes("Hold")){
+                                s2 = "Hold"
+                                document.getElementsByClassName("modal-header")[0].style.background = "#db9514";
+                            }
+                            else if(s1.includes("Sell")){
+                                s2 = "Sell"
+                                document.getElementsByClassName("modal-header")[0].style.background = "#bb2222";
+                            }
+                            else{
+                                s2 = "Sin Data"
+                                document.getElementsByClassName("modal-header")[0].style.background = "#999999";
+                            }
+                            document.getElementById("exampleModalLongTitle").outerHTML ='<h5 class="modal-title" id="exampleModalLongTitle">Posición Recomendada: '+s2+'</h5>';
+                            var stock_info = {{stock_info | tojson}};
+                            var recs = stock_info[i-1][5]
+                            console.log(recs)
+                            for (j = 0; j < recs.length; j++) {
+                                var node = document.createElement("li");
+                                if(recs[j][recs[j].length-1] == "0"){
+                                    node.className = "list-group-item list-group-item-sell"
+                                    var textnode = document.createTextNode(recs[j].substring(0, recs[j].length - 1)); 
+                                    node.appendChild(textnode);                   
+                                    document.getElementsByClassName("list-group")[0].appendChild(node);
+                                }
+                                else if(recs[j][recs[j].length-1] == "1"){
+                                    node.className = "list-group-item list-group-item-hold"
+                                    var textnode = document.createTextNode(recs[j].substring(0, recs[j].length - 1)); 
+                                    node.appendChild(textnode);                   
+                                    document.getElementsByClassName("list-group")[0].appendChild(node);
+                                }
+                                else if(recs[j][recs[j].length-1] == "2"){
+                                    node.className = "list-group-item list-group-item-buy"
+                                    var textnode = document.createTextNode(recs[j].substring(0, recs[j].length - 1)); 
+                                    node.appendChild(textnode);                   
+                                    document.getElementsByClassName("list-group")[0].appendChild(node);
+                                }
+                            }    
+                            //console.log("deleting widget")
+                            //document.getElementsByClassName("tradingview-widget-container")[0].style.display="none";
+                            //document.getElementsByClassName("tradingview-widget-container")[0].parentElement.innerHTML = '<iframe src={{ url_for("static",filename="assets/trybs_affix_navbar.htm")}} style="width:100%;height:280px;margin-bottom:15px;border:1px solid #ccc" scrolling="yes" frameborder="0"></iframe>'
+                        }
+                        function eventFire(el, etype){
+                            if (el.fireEvent) {
+                                el.fireEvent('on' + etype);
+                            } else {
+                                var evObj = document.createEvent('Events');
+                                evObj.initEvent(etype, true, false);
+                                el.dispatchEvent(evObj);
+                            }
+                            }
+                    </script>
 					</section>
 					<section style="padding-top: 1em;">
                         <!-- TradingView Widget BEGIN -->
@@ -311,12 +403,34 @@
 			</section>
         
     
-		<!-- Two -->
-			<section id="two" class="wrapper style2 alt">
-				<div class="inner"> 
-                    <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="125313/"></script>
-				</div>
-			</section>
+        <!-- Two -->
+        <!-- news -->
+            <div class="news-scroll">
+                <div class="news-dialog" role="document">
+                <div class="news-content">
+                    <div class="news-header">
+                        <p>"Stock Market" - Google News</p>
+                    <script>
+                        document.getElementsByClassName("news-header")[0].style.background = "#bb2222";
+                        function fill_news(){
+                            var news = {{news | tojson}};
+                            for (j = 0; j < news.length; j++) {
+                                var new_title = document.createElement("li")
+                                new_title.innerHTML = news[j];
+                                document.getElementsByClassName("news-content").appendChild();
+                        }
+                    </script>
+                    </div>
+                    <div class="news-body">
+                        <ul class="list-group">
+
+                        </ul>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+			
             
 		<!-- Scripts -->
 			<script src="{{ url_for('static',filename='assets/js/jquery.min.js')}}"></script>
@@ -324,6 +438,12 @@
 			<script src="{{ url_for('static',filename='assets/js/util.js')}}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
             <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+            <!-- Loading gif-->
+            <section id="two" class="wrapper style2 alt">
+				<div class="inner"> 
+                    <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="125313/"></script>
+				</div>
+			</section>
             
             <script>
                 stocks = document.getElementsByClassName("cell100 column1");
@@ -338,7 +458,6 @@
                     for (j = 7; j < rows.length; j++) {
                         var columns = rows[j].children;
                         for (k = 0; k < columns.length; k++){
-                            console.log(stock_info)
                             rows[j].children[k].innerHTML = stock_info[j-7][k];
                         }    
                     }    

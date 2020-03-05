@@ -5,6 +5,7 @@ Capa de datos
 #imports
 import pymongo
 import yfinance as yf
+from GoogleNews import GoogleNews
 
 '''
 Base de datos
@@ -50,6 +51,11 @@ def update_user(stocks,user):
 API
 '''
 
+rating_systems = {"Sell": ["Strong Sell","Sell","Moderate Sell","Weak Hold","Underweight","Reduce","Underperform","Negative","Sector Underperform","Market Undererform","Below Average","Underperformer"],
+                  "Neutral" : ["Hold","Neutral","Equal-Weight","Equal-weight","Sector Perform","Market Perform","Perform","Sector Weight","In-Line","Fair Value","Peer Perform","Average"],
+                  "Buy" : ["Buy","Moderate Buy","Accumulate","Overweight","Add","Strong Buy","Long-term Buy","Long-Term Buy","Market Outperform","Positive","Outperform","Sector Outperform","Market Outperform","Overperformer"]}
+
+
 
 def get_all_stocks_info(stocks):
     result = []
@@ -59,9 +65,10 @@ def get_all_stocks_info(stocks):
 
 
 def get_stock_info(sym):
-    try:
         result = []
         ticker = yf.Ticker(sym)
+        if list(ticker.history()["Close"]) == []:
+            return ["-","-","-","-","-",[]]
         result.append(str(list(ticker.history()["Close"])[-1]))
         result.append("{0:+06.2f}".format(float(result[0]) - list(ticker.history()["Close"])[-2]))
         try:
@@ -82,18 +89,27 @@ def get_stock_info(sym):
             result.append(ticker.options[0])
         except:
             result.append("-")
-    except:
-        raise Exception("Error en "+sym)
+        try:
+            f = list(ticker.recommendations["Firm"])
+            r = list(ticker.recommendations["To Grade"])
+            for i in range(len(r)):
+                if r[i] in rating_systems["Sell"]:
+                    r[i] = r[i]+"0"
+                elif r[i] in rating_systems["Neutral"]:
+                    r[i] = r[i]+"1"
+                elif r[i] in rating_systems["Buy"]:
+                    r[i] = r[i]+"2"
+            l = list([i+": "+j for i,j in zip(f,r)])
+            result.append(l)
+        except:
+            result.append("-")
     
-    return result
-
+        return result
 
 
 def get_rating(recs):
     score = 0
-    rating_systems = {"Sell": ["Strong Sell","Sell","Moderate Sell","Weak Hold","Underweight","Reduce","Underperform","Negative","Sector Underperform","Market Undererform","Below Average","Underperformer"],
-                      "Neutral" : ["Hold","Neutral","Equal-Weight","Equal-weight","Sector Perform","Market Perform","Perform","Sector Weight","In-Line","Fair Value","Peer Perform","Average"],
-                      "Buy" : ["Buy","Moderate Buy","Accumulate","Overweight","Add","Strong Buy","Long-term Buy","Long-Term Buy","Market Outperform","Positive","Outperform","Sector Outperform","Market Outperform","Overperformer"]}
+    
     for r in recs:
         if r in rating_systems["Sell"]:
             score -= 1
@@ -105,4 +121,8 @@ def get_rating(recs):
             print("Rating not recognized -------- ", r)
     return score
 
-#get_all_stocks_info(["AAPL","TSLA","FB","DIS","NFLX","GGAL","SPY"])
+def get_news():
+    googlenews = GoogleNews()
+    googlenews.setlang('en')
+    return googlenews.search("Stock Market")
+        

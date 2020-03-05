@@ -19,7 +19,9 @@ def add_user(username, password):
 
 def update_user(stocks, user):
     parsed_stocks = parse_stocks(stocks)
-    print(parsed_stocks)
+    for i in range(len(parsed_stocks)):
+        if len(parsed_stocks[i]) > 5:
+            parsed_stocks[i] = parsed_stocks[i][:5]
     return datos.update_user(parsed_stocks,user)
 
 
@@ -43,5 +45,13 @@ def update_one_stock_data(new_stocks,old_stocks,new_stock_info):
     parsed_stocks = parse_stocks(new_stocks)
     for i in range(len(old_stocks)):
         if old_stocks[i] != parsed_stocks[i]:
-            new_stock_info[i] = datos.get_stock_info(parsed_stocks[i])
+            if len(parsed_stocks[i]) > 5:
+                parsed_stocks[i] = parsed_stocks[i][:5]
+            if parsed_stocks[i] != "":
+                new_stock_info[i] = datos.get_stock_info(parsed_stocks[i])
+            else:
+                new_stock_info[i] = ["-","-","-","-","-",[]]
     return new_stock_info
+
+def get_news():
+    return datos.get_news()

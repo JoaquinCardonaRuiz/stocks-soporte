@@ -2419,7 +2419,10 @@
 	ul.contact li:before {
 		color: #00BC8A;
 	}
-
+	
+	.news-scroll{
+		display: none;
+	}
 /* Section/Article */
 
 	section.special, article.special {
@@ -3459,24 +3462,24 @@
 		  }
 		  
 		  .column2 {
-			width: 130px;
+			width: 150px;
 			padding-left: 55px;text-align-last: right;
 		  }
 		  
 		  .column3 {
-			width: 100px;text-align-last: right;
+			width: 120px;text-align-last: center;
 		  }
 		  
 		  .column4 {
-			width: 100px;text-align-last: center;
+			width: 120px;text-align-last: center;
 		  }
 		  
 		  .column5 {
-			width: 130px;text-align-last: center;
+			width: 150px;text-align-last: center;
 		  }
 		  
 		  .column6 {
-			width: 260px;text-align-last: left;
+			width: 220px;text-align-last: left;
 		  }
 		  
 		  
@@ -3574,3 +3577,27 @@
 		  input.tickerinput{
 			  height: 24px;
 		  }
+		  
+		  .modal-title{
+			  color: white;
+			  font-family: Roboto-Medium;
+			  font-size: 24px;
+		  }
+
+
+		  .list-group-item-buy{
+			  background: #84dd4949;
+			  font-size: 18px;
+
+		  }
+
+		  .list-group-item-hold{
+			background: #eebd5249;
+			font-size: 18px;
+		}
+
+		.list-group-item-sell{
+			background: #eb414149;
+			font-size: 18px;
+		}
+		
