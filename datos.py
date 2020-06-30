@@ -73,9 +73,9 @@ def get_stock_info(sym):
         result.append("{0:+06.2f}".format(float(result[0]) - list(ticker.history()["Close"])[-2]))
         try:
             rating = get_rating(list(ticker.recommendations["To Grade"]))
-            if rating >= 50:
+            if rating >= 0.2:
                 result.append("Buy ("+str(rating)+")")
-            elif rating <= -50:
+            elif rating <= -0.2:
                 result.append("Sell ("+str(rating)+")")
             else:
                 result.append("Hold ("+str(rating)+")")
@@ -119,7 +119,7 @@ def get_rating(recs):
             score += 1
         else:
             print("Rating not recognized -------- ", r)
-    return score
+    return ("{0:+.2f}".format(score/len(recs)))
 
 def get_news():
     googlenews = GoogleNews()
